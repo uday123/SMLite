@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_9" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+	<display-name>SMLite</display-name>
+	<description>SMLite enables the Financial Analyst to create vendors and track projected spending by month and get projections for Quarter and year. Vendor Entity Attributes – Name, Purchase Order (created) (Yes/NO) – If yes Number and details – Type – Staff augmentation or outbound projects, Software Licensing or Hardware Purchase</description>
+
+	<servlet>
+		<servlet-name>smlite.rest</servlet-name>
+		<servlet-class>com.lbo.sml.servlet.SpendManagementServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>smlite.rest</servlet-name>
+		<url-pattern>/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>/static/*</url-pattern>
+	</servlet-mapping>
+</web-app>
